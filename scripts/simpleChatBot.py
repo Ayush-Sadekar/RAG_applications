@@ -5,10 +5,23 @@ from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.core import VectorStoreIndex
 import os
 
+# Path to the API key file
+api_key_file = "api_key.txt"
+
+try:
+    # Read the API key from the file
+    with open(api_key_file, "r") as file:
+        api_key = file.read().strip()
+    
+    # Set the API key in the environment
+    os.environ["OPENAI_API_KEY"] = api_key
+    print("API key loaded successfully.")
+except FileNotFoundError:
+    print(f"Error: '{api_key_file}' not found. Please ensure the file exists.")
 
 
 # create LLM
-llm = OpenAI(model="gpt-4o")
+llm = OpenAI(model="o3-mini")
 
 #create embedding model
 embed_model = OpenAIEmbedding(model="text-embedding-3-small")
