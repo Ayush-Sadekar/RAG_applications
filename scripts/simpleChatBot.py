@@ -15,7 +15,7 @@ Settings.llm = llm
 Settings.embed_model = embed_model
 
 # load the documents
-data = SimpleDirectoryReader(input_dir="/work/data/",required_exts=[".docx"]).load_data()
+data = SimpleDirectoryReader(input_dir="/Users/ayush/Desktop/RAG_applications/articles",required_exts=[".txt"]).load_data()
 
 # index documents
 index = VectorStoreIndex.from_documents(data)
@@ -24,3 +24,4 @@ query_engine = index.as_query_engine(similarity_top_k=3)
  
 # generate response to query
 response = query_engine.query("What are the common themes of the blogs?")
+print(response)
