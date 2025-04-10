@@ -3,6 +3,8 @@ from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core import Settings
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.core import VectorStoreIndex
+import os
+
 
 
 # create LLM
@@ -21,7 +23,7 @@ data = SimpleDirectoryReader(input_dir="/Users/ayush/Desktop/RAG_applications/ar
 index = VectorStoreIndex.from_documents(data)
 
 query_engine = index.as_query_engine(similarity_top_k=3)
- 
+
 # generate response to query
 response = query_engine.query("What are the common themes of the blogs?")
 print(response)
