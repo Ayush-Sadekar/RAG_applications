@@ -46,7 +46,7 @@ response = ollama.chat(
         },
         {
             "role": "system",
-            "content": closestPages["documents"][0][0]
+            "content": closestPages["documents"][0][2]
         },
         {
             "role": "user",

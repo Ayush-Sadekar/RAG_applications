@@ -1,3 +1,4 @@
+Dining Hall Name: Dietrick Hall
 Mozarella Pesto Panini: {Calories: 700, Protein (g): 35}
 Southwest Chicken Panini: {Calories: 800, Protein (g): 45}
 Mozarella Sticks: {Calories: 400, Protein (g): 29}

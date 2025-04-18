@@ -1,3 +1,4 @@
+Dining Hall Name: West End
 Becky's Kickin' Chicken Sandwich: {Calories: 900, Protein (g): 42}
 Cheeze Pizza: {Calories: 1000, Protein (g): 25}
 Tortinelli Pasta: {Calories: 400, Protein (g): 17}
