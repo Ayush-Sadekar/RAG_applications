@@ -37,6 +37,7 @@ closestPages = collection.query(
     n_results=3
 )
 
+# there are only two documents in the collection, so there can only be two documents maximum 
 response = ollama.chat(
     model="llama3.2",
     messages=[
@@ -56,3 +57,23 @@ response = ollama.chat(
 )
 
 print(response["message"]["content"])
+
+
+# notes: maybe add each item as a separate document/embedding. Change the load_text function by using the .readlines() func instead of file.read()
+# notes cont. : figure out how to use python os module on my own
+
+### IMPROVEMENT RECOMMENDATIONS FROM CLAUDE 
+#system_messages = []
+#for doc in closestPages["documents"][0]:
+    #system_messages.append({
+        #"role": "system",
+        #"content": doc
+    #})
+
+# Add user query
+#messages = system_messages + [{
+    #"role": "user",
+    #"content": query
+#}]
+
+
